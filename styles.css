@@ -26,11 +26,35 @@ a {
 }
 
 body {
-	background-image: url(images/background.png);
-	background-repeat: repeat;
 	font-family: "General Sans", sans-serif;
 	line-height: 1.6;
 }
+
+body::-webkit-scrollbar {
+	width: 20px;
+}
+
+body::-webkit-scrollbar-track {
+	background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: white;
+	border-radius: 0px;
+	border: 1px solid gray;
+}
+
+.videobg {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+}
+
 button {
 	background: none;
 	border: none;
@@ -59,7 +83,7 @@ textarea {
 
 .title {
 	align-items: center;
-	background-color: #4B443C;
+	background-color: #332c26;
 	color: white;
 	display: flex;
 	height: 50px;
@@ -239,7 +263,61 @@ nav {
 	padding-bottom: 10px;
 }
 
-.menugrid {
-	display: grid;
-	grid-template-rows:  
+.vegpizzatitle {
+	align-items: center;
+	background-color: #81B622;
+	color: white;
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	margin-bottom: 10px;
+	padding: 0 20px;
+	width: 1580px;
+}
+
+.nonvegpizzatitle {
+	align-items: center;
+	background-color: #D01110;
+	color: white;
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	margin-bottom: 10px;
+	padding: 0 20px;
+	width: 1580px;
+}
+
+.sidestitle {
+	align-items: center;
+	background-color: #E5C101;
+	color: white;
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	margin-bottom: 10px;
+	padding: 0 20px;
+	width: 1580px;
+}
+
+.pizzaflex {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+}
+
+.pizzaitem {
+	background-color: #E8B68B;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: black 0px 2px 2px;
+	width: 305px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.pizzalabel {
+	font-size: 20px;
+	font-weight: bold;
 }

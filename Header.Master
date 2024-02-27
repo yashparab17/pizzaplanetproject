@@ -12,6 +12,9 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <video autoplay muted loop class="videobg">
+        <source src="/background/stars.webm" type="video/webm"/>
+    </video>
     <div>
         <form runat="server">
             <header>

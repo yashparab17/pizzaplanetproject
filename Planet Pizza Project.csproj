@@ -71,9 +71,10 @@
     <Content Include="App_Data\PlanetPizzaDatabase_log.ldf">
       <DependentUpon>PlanetPizzaDatabase.mdf</DependentUpon>
     </Content>
-    <Content Include="images\background.png" />
+    <Content Include="background\stars.webm" />
     <Content Include="images\logo.png" />
     <Content Include="images\pizzahome.jpg" />
+    <Content Include="images\pizzas\pizza1.png" />
     <Content Include="modern-normalize.css" />
     <Content Include="styles.css" />
     <Content Include="Web.config" />
