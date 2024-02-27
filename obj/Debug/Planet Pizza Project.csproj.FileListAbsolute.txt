@@ -1,0 +1,59 @@
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\Planet Pizza Project.dll.config
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\Planet Pizza Project.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\Planet Pizza Project.pdb
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\csc.exe
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\csc.exe.config
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\csc.rsp
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\csi.exe
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\csi.exe.config
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\csi.rsp
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.CodeAnalysis.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.CSharp.Core.targets
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.Managed.Core.targets
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.VisualBasic.Core.targets
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\Microsoft.Win32.Primitives.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.AppContext.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Collections.Immutable.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Console.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Diagnostics.StackTrace.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Globalization.Calendars.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.IO.Compression.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.IO.Compression.ZipFile.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.IO.FileSystem.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.IO.FileSystem.Primitives.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Net.Http.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Net.Sockets.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Reflection.Metadata.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Security.Cryptography.Encoding.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Security.Cryptography.Primitives.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Text.Encoding.CodePages.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Threading.Tasks.Extensions.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.ValueTuple.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Xml.ReaderWriter.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Xml.XmlDocument.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Xml.XPath.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\System.Xml.XPath.XDocument.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\vbc.exe
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\vbc.exe.config
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\vbc.rsp
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\VBCSCompiler.exe
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\VBCSCompiler.exe.config
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.csproj.AssemblyReference.cache
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.csproj.CoreCompileInputs.cache
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.csproj.CopyComplete
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.dll
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.pdb

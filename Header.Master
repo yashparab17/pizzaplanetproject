@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Header.master.cs" Inherits="Planet_Pizza_Project.Header" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="modern-normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div>
+        <form runat="server">
+            <header>
+                <div>
+                    <a href="Home.aspx">
+                        <img src="/images/logo.png" class="logo" />
+                    </a>
+                </div>
+                <div class="sign">
+                    <asp:Button ID="Button1" runat="server" Text="Sign Up" CssClass="signbutton" OnClick="Button1_Click" />
+                    <asp:Button ID="Button2" runat="server" Text="Sign In" CssClass="signbutton" OnClick="Button2_Click" />
+                    <asp:Label ID="Label1" runat="server" CssClass="welcome"></asp:Label>
+                </div>
+            </header>
+            <nav>
+                <asp:Button ID="NavButton1" runat="server" Text="Menu" CssClass="navbutton" OnClick="NavButton1_Click" />
+                <asp:Button ID="NavButton2" runat="server" Text="Customize" CssClass="navbutton" OnClick="NavButton2_Click" />
+                <asp:Button ID="NavButton3" runat="server" Text="About Us" CssClass="navbutton" OnClick="NavButton3_Click" />
+                <asp:Button ID="NavButton4" runat="server" Text="Contact" CssClass="navbutton" OnClick="NavButton4_Click" />
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </div>
+</body>
+</html>
