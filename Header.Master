@@ -24,9 +24,11 @@
                     </a>
                 </div>
                 <div class="sign">
-                    <asp:Button ID="Button1" runat="server" Text="Sign Up" CssClass="signbutton" OnClick="Button1_Click" />
-                    <asp:Button ID="Button2" runat="server" Text="Sign In" CssClass="signbutton" OnClick="Button2_Click" />
+                    <asp:Button ID="SignUpButton" runat="server" Text="Sign Up" CssClass="signbutton" OnClick="SignOutButton_Click" />
+                    <asp:Button ID="SignInButton" runat="server" Text="Sign In" CssClass="signbutton" OnClick="SignInButton_Click" />
                     <asp:Label ID="Label1" runat="server" CssClass="welcome"></asp:Label>
+                    <asp:Button ID="SignOutButton" runat="server" Text="Sign Out" CssClass="signbutton" OnClick="SignOutButton_Click" />
+                    <asp:Button ID="UserProfileButton" runat="server" Text="View User Profile" CssClass="signbutton" OnClick="UserProfileButton_Click" />
                 </div>
             </header>
             <nav>

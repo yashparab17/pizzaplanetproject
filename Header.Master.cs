@@ -13,24 +13,44 @@ namespace Planet_Pizza_Project
         {
             if (Session["name"] != null)
             {
-                Button1.Visible = false;
-                Button2.Visible = false;
+                SignUpButton.Visible = false;
+                SignInButton.Visible = false;
+                Label1.Visible = true;
                 Label1.Text = "Welcome " + Session["name"];
+                SignOutButton.Visible = true;
+                UserProfileButton.Visible = true;
             }
             else
             {
                 Label1.Visible = false;
+                SignOutButton.Visible = false;
+                UserProfileButton.Visible = false;
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void SignUpButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/SignUp.aspx");
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void SignInButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/SignIn.aspx");
+        }
+
+        protected void SignOutButton_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            SignUpButton.Visible = true;
+            SignInButton.Visible = true;
+            Label1.Visible = false;
+            SignOutButton.Visible = false;
+            UserProfileButton.Visible = false;
+        }
+
+        protected void UserProfileButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Profile.aspx");
         }
 
         protected void NavButton1_Click(object sender, EventArgs e)
