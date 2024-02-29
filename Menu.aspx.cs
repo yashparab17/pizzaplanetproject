@@ -14,16 +14,28 @@ namespace Planet_Pizza_Project
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\App_Data\PlanetPizzaDatabase.mdf;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
-            string query = "select * from Pizzas";
-            SqlCommand cmd = new SqlCommand(query, con);
-            con.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read())
+            if (!IsPostBack)
             {
-                string pizzaName = reader["name"].ToString();
-                string pizzaPrice = reader["price"].ToString();
-                PizzaLabel1.Text = pizzaName + " Pizza";
-                PriceLabel1.Text = "Rs. " + pizzaPrice;
+                string vegQuery = "SELECT * FROM Pizzas WHERE isVeg = 1";
+                SqlDataAdapter vegAdapter = new SqlDataAdapter(vegQuery, con);
+                DataTable vegTable = new DataTable();
+                vegAdapter.Fill(vegTable);
+                VegDataList.DataSource = vegTable;
+                VegDataList.DataBind();
+
+                string nonVegQuery = "SELECT * FROM Pizzas WHERE isVeg = 0";
+                SqlDataAdapter nonVegAdapter = new SqlDataAdapter(nonVegQuery, con);
+                DataTable nonVegTable = new DataTable();
+                nonVegAdapter.Fill(nonVegTable);
+                NonVegDataList.DataSource = nonVegTable;
+                NonVegDataList.DataBind();
+
+                string sidesQuery = "SELECT * FROM Sides";
+                SqlDataAdapter sidesAdapter = new SqlDataAdapter(sidesQuery, con);
+                DataTable sidesTable = new DataTable();
+                sidesAdapter.Fill(sidesTable);
+                SidesDataList.DataSource = sidesTable;
+                SidesDataList.DataBind();
             }
         }
     }

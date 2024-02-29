@@ -302,12 +302,12 @@ nav {
 .pizzaflex {
 	display: flex;
 	justify-content: center;
-	gap: 12px;
 }
 
 .pizzaitem {
 	background-color: #E8B68B;
 	display: flex;
+	text-align: center;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -315,9 +315,10 @@ nav {
 	width: 305px;
 	padding: 5px;
 	margin-bottom: 10px;
+	margin-inline: 6px;
 }
 
 .pizzalabel {
-	font-size: 20px;
+	font-size: 17px;
 	font-weight: bold;
 }
