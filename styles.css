@@ -1,71 +1,71 @@
 /* Imported Fonts */
 
 @font-face {
-	font-display: swap;
-	font-family: 'General Sans';
-	font-style: normal;
-	font-weight: 200 700;
-	src: url('../fonts/GeneralSans-Variable.woff2') format('woff2'), url('../fonts/GeneralSans-Variable.woff') format('woff'), url('../fonts/GeneralSans-Variable.ttf') format('truetype');
+    font-display: swap;
+    font-family: 'General Sans';
+    font-style: normal;
+    font-weight: 200 700;
+    src: url('../fonts/GeneralSans-Variable.woff2') format('woff2'), url('../fonts/GeneralSans-Variable.woff') format('woff'), url('../fonts/GeneralSans-Variable.ttf') format('truetype');
 }
 
 /* Base Styles */
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 body {
-	font-family: "General Sans", sans-serif;
-	line-height: 1.6;
+    font-family: "General Sans", sans-serif;
+    line-height: 1.6;
 }
 
-body::-webkit-scrollbar {
-	width: 20px;
-}
+    body::-webkit-scrollbar {
+        width: 20px;
+    }
 
-body::-webkit-scrollbar-track {
-	background: black;
-}
+    body::-webkit-scrollbar-track {
+        background: black;
+    }
 
-body::-webkit-scrollbar-thumb {
-	background-color: white;
-	border-radius: 0px;
-	border: 1px solid gray;
-}
+    body::-webkit-scrollbar-thumb {
+        background-color: white;
+        border-radius: 0px;
+        border: 1px solid gray;
+    }
 
 .videobg {
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
-	z-index: -1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
 
 button {
-	background: none;
-	border: none;
-	color: inherit;
-	cursor: pointer;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .container {
-	box-shadow: 0px 2px 2px black;
-	margin: 20px auto;
-	max-width: 1600px;
+    box-shadow: 0px 2px 2px black;
+    margin: 20px auto;
+    max-width: 1600px;
 }
 
 img,
@@ -73,252 +73,252 @@ picture,
 svg,
 video,
 canvas {
-	height: auto;
-	max-width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 textarea {
-	resize: none;
+    resize: none;
 }
 
 .title {
-	align-items: center;
-	background-color: #332c26;
-	color: white;
-	display: flex;
-	height: 50px;
-	justify-content: center;
-	margin: 10px 0;
-	padding: 0 20px;
-	width: 1580px;
+    align-items: center;
+    background-color: #332c26;
+    color: white;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 0 20px;
+    width: 1580px;
 }
 
 .workbutton {
-	background-color: #FF0000;
-	border: none;
-	color: white;
-	padding: 1em;
-	font-weight: bold;
-	box-shadow: black 0px 2px 2px;
+    background-color: #FF0000;
+    border: none;
+    color: white;
+    padding: 1em;
+    font-weight: bold;
+    box-shadow: black 0px 2px 2px;
 }
 
 /* Header and Navigation Bar */
 
 header {
-	align-items: center;
-	background-color: #4b443c;
-	box-shadow: 0px 2px 2px black;
-	display: flex;
-	height: 100px;
-	margin: 0 auto;
-	padding: 0 1em;
-	width: 1600px;
+    align-items: center;
+    background-color: #4b443c;
+    box-shadow: 0px 2px 2px black;
+    display: flex;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0 1em;
+    width: 1600px;
 }
 
 .logo {
-	height: 75px;
+    height: 75px;
 }
 
 nav {
-	align-items: center;
-	background-color: #332c26;
-	display: flex;
-	margin: 0 auto;
-	width: 1600px;
+    align-items: center;
+    background-color: #332c26;
+    display: flex;
+    margin: 0 auto;
+    width: 1600px;
 }
 
 .navbutton {
-	box-shadow: 0px 2px 2px black;
-	border: none;
-	background-color: inherit;
-	color: #ecd5bb;
-	flex: 1;
-	font-size: 20px;
-	height: 50px;
+    box-shadow: 0px 2px 2px black;
+    border: none;
+    background-color: inherit;
+    color: #ecd5bb;
+    flex: 1;
+    font-size: 20px;
+    height: 50px;
 }
 
-.navbutton:hover {
-	animation: all 0.2s ease-in-out;
-	background-color: #4b443c;
-	box-shadow: 0px 5px 5px black;
-}
+    .navbutton:hover {
+        animation: all 0.2s ease-in-out;
+        background-color: #4b443c;
+        box-shadow: 0px 5px 5px black;
+    }
 
 .sign {
-	margin-left: auto;
+    margin-left: auto;
 }
 
 .signbutton {
-	background-color: #fcd61d;
-	box-shadow: 0px 2px 2px black;
-	border: none;
-	font-size: 20px;
-	font-weight: 500;
-	height: 50px;
-	margin: 0 10px;
-	width: 200px;
+    background-color: #fcd61d;
+    box-shadow: 0px 2px 2px black;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    height: 50px;
+    margin: 0 10px;
+    width: 200px;
 }
 
 .welcome {
-	font-size: 24px;
-	color: #ecd5bb;
+    font-size: 24px;
+    color: #ecd5bb;
 }
 
 /* Home */
 
 .deals {
-	align-items: center;
-	background-color: #ecd5bb;
-	display: flex;
-	flex-direction: column;
-	height: 500px;
+    align-items: center;
+    background-color: #ecd5bb;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
 }
 
 .intro {
-	align-items: center;
-	background: url(images/pizzahome.jpg) center;
-	background-size: 100%;
-	color: #ecd5bb;
-	display: flex;
-	flex-direction: column;
-	height: 650px;
-	justify-content: center;
-	text-align: center;
+    align-items: center;
+    background: url(images/pizzahome.jpg) center;
+    background-size: 100%;
+    color: #ecd5bb;
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    justify-content: center;
+    text-align: center;
 }
 
-	.intro h1 {
-		font-size: 110px;
-	}
+    .intro h1 {
+        font-size: 110px;
+    }
 
-	.intro h2 {
-		font-size: 55px;
-	}
+    .intro h2 {
+        font-size: 55px;
+    }
 
 /* Sign Up */
 
 .signup {
-	background-color: #ECD5BB;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-bottom: 10px;
-	height: auto;
+    background-color: #ECD5BB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    height: auto;
 }
 
 .signupgrid {
-	display: grid;
-	grid-template-rows: repeat(4, 30px);
-	grid-template-columns: auto auto auto;
-	grid-gap: 1em 1em;
-	font-size: 20px;
+    display: grid;
+    grid-template-rows: repeat(4, 30px);
+    grid-template-columns: auto auto auto;
+    grid-gap: 1em 1em;
+    font-size: 20px;
 }
 
 .validatelabel {
-	justify-self: right;
+    justify-self: right;
 }
 
-	.validatelabel::after {
-		content: "*";
-		font-weight: bold;
-		color: red;
-	}
+    .validatelabel::after {
+        content: "*";
+        font-weight: bold;
+        color: red;
+    }
 
 .validate {
-	color: red;
+    color: red;
 }
 
 .signupflex {
-	display: flex;
-	flex-direction: column;
-	font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
 }
 
 .signupgridbutton {
-	grid-row: 7 / 8;
-	grid-column: 1 / 4;
+    grid-row: 7 / 8;
+    grid-column: 1 / 4;
 }
 
 /* Sign In */
 
 .signingrid {
-	display: grid;
-	grid-template-rows: repeat(4, 30px);
-	grid-template-columns: auto auto auto;
-	grid-gap: 1em 1em;
-	font-size: 20px;
+    display: grid;
+    grid-template-rows: repeat(4, 30px);
+    grid-template-columns: auto auto auto;
+    grid-gap: 1em 1em;
+    font-size: 20px;
 }
 
 .signingridbutton {
-	grid-row: 3 / 5;
-	grid-column: 1 / 4;
+    grid-row: 3 / 5;
+    grid-column: 1 / 4;
 }
 
 /* Menu */
 
 .menu {
-	background-color: #ECD5BB;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: auto;
-	padding-bottom: 10px;
+    background-color: #ECD5BB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 10px;
 }
 
 .vegpizzatitle {
-	align-items: center;
-	background-color: #81B622;
-	color: white;
-	display: flex;
-	height: 50px;
-	justify-content: center;
-	margin-bottom: 10px;
-	padding: 0 20px;
-	width: 1580px;
+    align-items: center;
+    background-color: #81B622;
+    color: white;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    width: 1580px;
 }
 
 .nonvegpizzatitle {
-	align-items: center;
-	background-color: #D01110;
-	color: white;
-	display: flex;
-	height: 50px;
-	justify-content: center;
-	margin-bottom: 10px;
-	padding: 0 20px;
-	width: 1580px;
+    align-items: center;
+    background-color: #D01110;
+    color: white;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    width: 1580px;
 }
 
 .sidestitle {
-	align-items: center;
-	background-color: #E5C101;
-	color: white;
-	display: flex;
-	height: 50px;
-	justify-content: center;
-	margin-bottom: 10px;
-	padding: 0 20px;
-	width: 1580px;
+    align-items: center;
+    background-color: #E5C101;
+    color: white;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    width: 1580px;
 }
 
 .pizzaflex {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .pizzaitem {
-	background-color: #E8B68B;
-	display: flex;
-	text-align: center;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	box-shadow: black 0px 2px 2px;
-	width: 305px;
-	padding: 5px;
-	margin-bottom: 10px;
-	margin-inline: 6px;
+    background-color: #E8B68B;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: black 0px 2px 2px;
+    width: 305px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-inline: 6px;
 }
 
 .pizzalabel {
-	font-size: 17px;
-	font-weight: bold;
+    font-size: 17px;
+    font-weight: bold;
 }
