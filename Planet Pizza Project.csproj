@@ -84,6 +84,9 @@
     <Content Include="images\pizzas\pizza7.png" />
     <Content Include="images\pizzas\pizza8.png" />
     <Content Include="images\pizzas\pizza9.png" />
+    <Content Include="images\sides\side2.png" />
+    <Content Include="images\sides\side1.png" />
+    <Content Include="images\sides\side3.png" />
     <Content Include="modern-normalize.css" />
     <Content Include="styles.css" />
     <Content Include="Web.config" />
@@ -92,6 +95,7 @@
     <Content Include="SignUp.aspx" />
     <Content Include="SignIn.aspx" />
     <Content Include="Profile.aspx" />
+    <Content Include="Status.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Header.Master.cs">
@@ -136,6 +140,13 @@
     </Compile>
     <Compile Include="Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Status.aspx.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Status.aspx.designer.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
