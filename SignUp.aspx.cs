@@ -17,25 +17,26 @@ namespace Planet_Pizza_Project
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void SignUpButton_Click(object sender, EventArgs e)
         {
-            string query = "insert into Accounts values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "')";
+            string query = "insert into Accounts values('" + NameTextBox.Text + "','" + EmailTextBox.Text + "','" + PasswordTextBox.Text + "','" + MobileTextBox.Text + "','" + AddressTextBox.Text + "')";
+
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
             int i = Convert.ToInt32(cmd.ExecuteNonQuery());
             MultiView1.ActiveViewIndex = 1;
             if (i > 0)
             {
-                Label7.Text = "You have signed up successfully!";
+                Status.Text = "You have signed up successfully!";
             }
             else
             {
-                Label7.Text = "There was an error. Please try again.";
-                Button2.Visible = false;
+                Status.Text = "There was an error. Please try again.";
+                SignInButton.Visible = false;
             }
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void SignInButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/SignIn.aspx");
         }

@@ -14,12 +14,12 @@ namespace Planet_Pizza_Project
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\App_Data\PlanetPizzaDatabase.mdf;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            Status.Visible = false;
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void SignIn_Click(object sender, EventArgs e)
         {
-            string query = "select * from Accounts where email = '" + TextBox1.Text + "' and password = '" + TextBox2.Text + "'";
+            string query = "select * from Accounts where email = '" + EmailTextBox.Text + "' and password = '" + PasswordTextBox.Text + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader();
@@ -33,9 +33,8 @@ namespace Planet_Pizza_Project
             }
             else
             {
-                reader.Close();
-                con.Close();
-                Response.Redirect("SignIn.aspx");
+                Status.Visible = true;
+                Status.Text = "Invalid details! Please re-enter your details.";
             }
         }
     }

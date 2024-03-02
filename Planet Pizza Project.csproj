@@ -87,6 +87,7 @@
     <Content Include="images\sides\side2.png" />
     <Content Include="images\sides\side1.png" />
     <Content Include="images\sides\side3.png" />
+    <Content Include="images\sides\side3.png" />
     <Content Include="modern-normalize.css" />
     <Content Include="styles.css" />
     <Content Include="Web.config" />
@@ -96,6 +97,7 @@
     <Content Include="SignIn.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Status.aspx" />
+    <Content Include="Customize.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Header.Master.cs">
@@ -147,6 +149,13 @@
     </Compile>
     <Compile Include="Status.aspx.designer.cs">
       <DependentUpon>Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customize.aspx.cs">
+      <DependentUpon>Customize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customize.aspx.designer.cs">
+      <DependentUpon>Customize.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -165,15 +165,6 @@ nav {
 
 /* Home */
 
-.deals {
-    background-color: #ECD5BB;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding-bottom: 10px;
-}
-
 .intro {
     align-items: center;
     background: url(images/pizzahome.jpg) center;
@@ -194,6 +185,26 @@ nav {
         font-size: 55px;
     }
 
+.deals {
+    background-color: #ECD5BB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.dealsad {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.adcontainer {
+    width: 256px;
+    height: 256px;
+}
+
 /* Sign Up */
 
 .signup {
@@ -208,7 +219,7 @@ nav {
 .signupgrid {
     display: grid;
     grid-template-rows: repeat(4, 30px);
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-gap: 1em 1em;
     font-size: 20px;
 }
@@ -235,21 +246,20 @@ nav {
 
 .signupgridbutton {
     grid-row: 7 / 8;
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
 }
 
 /* Sign In */
 
 .signingrid {
     display: grid;
-    grid-template-rows: repeat(4, 30px);
+    grid-template-rows: 30px 30px 60px 30px;
     grid-template-columns: auto auto auto;
     grid-gap: 1em 1em;
     font-size: 20px;
 }
 
-.signingridbutton {
-    grid-row: 3 / 5;
+.signingridcol {
     grid-column: 1 / 4;
 }
 
@@ -388,4 +398,45 @@ nav {
 
 .status {
     font-size: 20px;
+}
+
+/* Customize */
+
+.customize {
+    background-color: #ECD5BB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.customizeflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.customizelabels {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.customizecontrols {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+
+.customizeimage {
+    position: absolute;
+}
+
+.customizeimagerelative {
+    position: relative;
+    top: 0;
+    left: 0;
 }
