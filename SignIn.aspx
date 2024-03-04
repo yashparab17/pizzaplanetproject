@@ -15,7 +15,7 @@
             <asp:TextBox ID="PasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PasswordTextBox" ErrorMessage="Password is required." CssClass="validate"></asp:RequiredFieldValidator>
             <asp:Button ID="SignIn" runat="server" Text="Sign In" OnClick="SignIn_Click" CssClass="workbutton signingridcol" />
-            <asp:Label ID="Status" runat="server" CssClass="signingridcol"></asp:Label>
         </div>
+        <asp:Label ID="Status" runat="server" CssClass="signinerror"></asp:Label>
     </div>
 </asp:Content>

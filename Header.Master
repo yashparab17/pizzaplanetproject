@@ -27,15 +27,15 @@
                     <asp:Button ID="SignUpButton" runat="server" Text="Sign Up" CssClass="signbutton" OnClick="SignUpButton_Click" />
                     <asp:Button ID="SignInButton" runat="server" Text="Sign In" CssClass="signbutton" OnClick="SignInButton_Click" />
                     <asp:Label ID="Label1" runat="server" CssClass="welcome"></asp:Label>
-                    <asp:Button ID="SignOutButton" runat="server" Text="Sign Out" CssClass="signbutton" OnClick="SignOutButton_Click" />
+                    <asp:Button ID="ViewCartButton" runat="server" Text="View Cart" CssClass="signbutton" OnClick="ViewCartButton_Click" />
                     <asp:Button ID="UserProfileButton" runat="server" Text="View User Profile" CssClass="signbutton" OnClick="UserProfileButton_Click" />
+                    <asp:Button ID="SignOutButton" runat="server" Text="Sign Out" CssClass="signbutton" OnClick="SignOutButton_Click" />
                 </div>
             </header>
             <nav>
                 <asp:Button ID="NavButton1" runat="server" Text="Menu" CssClass="navbutton" OnClick="NavButton1_Click" />
                 <asp:Button ID="NavButton2" runat="server" Text="Customize" CssClass="navbutton" OnClick="NavButton2_Click" />
                 <asp:Button ID="NavButton3" runat="server" Text="About Us" CssClass="navbutton" OnClick="NavButton3_Click" />
-                <asp:Button ID="NavButton4" runat="server" Text="Contact" CssClass="navbutton" OnClick="NavButton4_Click" />
             </nav>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

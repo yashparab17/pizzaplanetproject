@@ -45,22 +45,26 @@ namespace Planet_Pizza_Project
             {
                 Button button = (Button)sender;
                 string pizzaID = button.CommandArgument.ToString();
+                Session["checkCart"] = 1;
                 string query1 = "SELECT * FROM Pizzas WHERE ID = '" + pizzaID + "'";
                 SqlCommand cmd1 = new SqlCommand(query1, con);
                 con.Open();
                 SqlDataReader reader = cmd1.ExecuteReader();
                 if (reader.Read())
                 {
-                    string pizzaName = reader["name"].ToString();
-                    int pizzaPrice = Convert.ToInt32(reader["price"]);
+                    string pizzaImage = reader["imagepath"].ToString();
+                    string pizzaName = reader["pizzaName"].ToString();
+                    int pizzaPrice = Convert.ToInt32(reader["pizzaPrice"]);
                     reader.Close();
-                    string query2 = "INSERT INTO Orders (itemName, itemPrice) VALUES(@pizzaName, @pizzaPrice)";
+                    string query2 = "INSERT INTO Orders VALUES(@pizzaImage, @pizzaName, @pizzaPrice)";
                     SqlCommand cmd2 = new SqlCommand(query2, con);
+                    cmd2.Parameters.AddWithValue("@pizzaImage", pizzaImage);
                     cmd2.Parameters.AddWithValue("@pizzaName", pizzaName);
                     cmd2.Parameters.AddWithValue("@pizzaPrice", pizzaPrice);
                     cmd2.ExecuteNonQuery();
-                    Response.Redirect("Home.aspx");
+                    Response.Redirect("Cart.aspx");
                 }
+                con.Close();
             }
             else
             {
@@ -74,22 +78,26 @@ namespace Planet_Pizza_Project
             {
                 Button button = (Button)sender;
                 string sideID = button.CommandArgument.ToString();
+                Session["checkCart"] = 1;
                 string query1 = "SELECT * FROM Sides WHERE ID = '" + sideID + "'";
                 SqlCommand cmd1 = new SqlCommand(query1, con);
                 con.Open();
                 SqlDataReader reader = cmd1.ExecuteReader();
                 if (reader.Read())
                 {
-                    string sideName = reader["name"].ToString();
-                    int sidePrice = Convert.ToInt32(reader["price"]);
+                    string sideImage = reader["imagepath"].ToString();
+                    string sideName = reader["sideName"].ToString();
+                    int sidePrice = Convert.ToInt32(reader["sidePrice"]);
                     reader.Close();
-                    string query2 = "INSERT INTO Orders (itemName, itemPrice) VALUES(@sideName, @sidePrice)";
+                    string query2 = "INSERT INTO Orders VALUES(@sideImage, @sideName, @sidePrice)";
                     SqlCommand cmd2 = new SqlCommand(query2, con);
+                    cmd2.Parameters.AddWithValue("@sideImage", sideImage);
                     cmd2.Parameters.AddWithValue("@sideName", sideName);
                     cmd2.Parameters.AddWithValue("@sidePrice", sidePrice);
                     cmd2.ExecuteNonQuery();
-                    Response.Redirect("Home.aspx");
+                    Response.Redirect("Cart.aspx");
                 }
+                con.Close();
             }
             else
             {

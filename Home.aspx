@@ -14,7 +14,6 @@
         <div class="dealsad">
             <asp:AdRotator ID="Deal1" runat="server" CssClass="adcontainer"/>
             <asp:AdRotator ID="Deal2" runat="server" CssClass="adcontainer"/>
-            <asp:AdRotator ID="Deal3" runat="server" CssClass="adcontainer"/>
         </div>
     </div>
 </asp:Content>

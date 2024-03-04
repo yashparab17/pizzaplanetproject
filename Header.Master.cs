@@ -19,12 +19,14 @@ namespace Planet_Pizza_Project
                 Label1.Text = "Welcome " + Session["name"];
                 SignOutButton.Visible = true;
                 UserProfileButton.Visible = true;
+                ViewCartButton.Visible = true;
             }
             else
             {
                 Label1.Visible = false;
                 SignOutButton.Visible = false;
                 UserProfileButton.Visible = false;
+                ViewCartButton.Visible = false;
             }
         }
 
@@ -53,11 +55,15 @@ namespace Planet_Pizza_Project
             Response.Redirect("~/Profile.aspx");
         }
 
+        protected void ViewCartButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Cart.aspx");
+        }
+
         protected void NavButton1_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Menu.aspx");
         }
-
         protected void NavButton2_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Customize.aspx");
@@ -65,10 +71,6 @@ namespace Planet_Pizza_Project
         protected void NavButton3_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/About.aspx");
-        }
-        protected void NavButton4_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Contact.aspx");
         }
     }
 }

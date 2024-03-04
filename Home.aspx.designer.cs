@@ -31,14 +31,5 @@ namespace Planet_Pizza_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.AdRotator Deal2;
-
-        /// <summary>
-        /// Deal3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.AdRotator Deal3;
     }
 }

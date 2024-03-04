@@ -51,13 +51,13 @@ namespace Planet_Pizza_Project
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// SignOutButton control.
+        /// ViewCartButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SignOutButton;
+        protected global::System.Web.UI.WebControls.Button ViewCartButton;
 
         /// <summary>
         /// UserProfileButton control.
@@ -67,6 +67,15 @@ namespace Planet_Pizza_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button UserProfileButton;
+
+        /// <summary>
+        /// SignOutButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SignOutButton;
 
         /// <summary>
         /// NavButton1 control.
@@ -94,15 +103,6 @@ namespace Planet_Pizza_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button NavButton3;
-
-        /// <summary>
-        /// NavButton4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button NavButton4;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

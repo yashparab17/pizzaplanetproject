@@ -16,22 +16,13 @@ namespace Planet_Pizza_Project
         protected void Page_Load(object sender, EventArgs e)
         {
             UpdateDetailsDiv.Visible = false;
-            if (Session["name"] != null)
+            if (Session["email"] != null)
             {
-                string strname = Session["name"].ToString();
-                string query = "select * from Accounts where name = '" + strname + "'";
-                SqlCommand cmd = new SqlCommand(query, con);
-                con.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    DetailsName.Text = "Name: " + reader["name"].ToString();
-                    DetailsEmail.Text = "Email: " + reader["email"].ToString();
-                    savedEmail = reader["email"].ToString();
-                    DetailsMobile.Text = "Mobile No: " + reader["mobile"].ToString();
-                    DetailsAddress.Text = "Address: " + reader["address"].ToString();
-                }
-                con.Close();
+                DetailsName.Text = "Name: " + Session["name"].ToString();
+                DetailsEmail.Text = "Email: " + Session["email"].ToString();
+                savedEmail = Session["email"].ToString();
+                DetailsMobile.Text = "Mobile No: " + Session["mobile"].ToString();
+                DetailsAddress.Text = "Address: " + Session["address"].ToString();
             }
             else
             {
