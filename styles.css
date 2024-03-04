@@ -201,8 +201,8 @@ nav {
 }
 
 .adcontainer {
-    width: 256px;
-    height: 256px;
+    width: 1400px;
+    height: auto;
 }
 
 /* Sign Up */
@@ -511,4 +511,49 @@ nav {
 .feedback {
     width: 500px;
     height: 200px;
+    margin-bottom: 10px;
+}
+
+/* Reviews */
+
+.reviews {
+    background-color: #ECD5BB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.reviewsflex {
+    display: flex;
+    justify-content: center;
+}
+
+.reviewsitem {
+    background-color: #E8B68B;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: black 0px 2px 2px;
+    width: 1580px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-inline: 6px;
+}
+
+.reviewsname {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.reviewsdatetime {
+    font-size: 16px;
+}
+
+.reviewsfeedback {
+    font-size: 20px;
 }

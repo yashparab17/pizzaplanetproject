@@ -204,6 +204,24 @@ namespace Planet_Pizza_Project
         protected global::System.Web.UI.WebControls.Image ToppingV;
 
         /// <summary>
+        /// CustomizedNameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CustomizedNameLabel;
+
+        /// <summary>
+        /// CustomizedNameTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CustomizedNameTextBox;
+
+        /// <summary>
         /// PriceLabel control.
         /// </summary>
         /// <remarks>
@@ -211,5 +229,14 @@ namespace Planet_Pizza_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label PriceLabel;
+
+        /// <summary>
+        /// AddToCartButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddToCartButton;
     }
 }

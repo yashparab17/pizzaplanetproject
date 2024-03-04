@@ -12,8 +12,7 @@
             <h1>Today's Deals</h1>
         </div>
         <div class="dealsad">
-            <asp:AdRotator ID="Deal1" runat="server" CssClass="adcontainer"/>
-            <asp:AdRotator ID="Deal2" runat="server" CssClass="adcontainer"/>
+            <asp:AdRotator ID="Deal1" runat="server" CssClass="adcontainer" AdvertisementFile="AdRotator.xml"/>
         </div>
     </div>
 </asp:Content>

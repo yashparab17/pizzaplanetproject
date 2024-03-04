@@ -35,7 +35,7 @@
             <nav>
                 <asp:Button ID="NavButton1" runat="server" Text="Menu" CssClass="navbutton" OnClick="NavButton1_Click" />
                 <asp:Button ID="NavButton2" runat="server" Text="Customize" CssClass="navbutton" OnClick="NavButton2_Click" />
-                <asp:Button ID="NavButton3" runat="server" Text="About Us" CssClass="navbutton" OnClick="NavButton3_Click" />
+                <asp:Button ID="NavButton3" runat="server" Text="Reviews" CssClass="navbutton" OnClick="NavButton3_Click" />
             </nav>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

@@ -54,8 +54,11 @@
                 <asp:Image ID="ToppingV" runat="server" ImageUrl="~/images/customize/topping6.png" CssClass="customizeimageabsolute"/>
             </div>
         </div>
+        <asp:Label ID="CustomizedNameLabel" runat="server" Text="Name your Pizza!"></asp:Label>
+        <asp:TextBox ID="CustomizedNameTextBox" runat="server"></asp:TextBox>
         <div>
             <asp:Label ID="PriceLabel" runat="server"></asp:Label>
         </div>
+        <asp:Button ID="AddToCartButton" runat="server" Text="Add To Cart" CssClass="workbutton" OnClick="AddToCartButton_Click" />
     </div>
 </asp:Content>

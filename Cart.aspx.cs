@@ -43,12 +43,12 @@ namespace Planet_Pizza_Project
 
         protected void GoBackButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Home.aspx");
+            Response.Redirect("~/Home.aspx");
         }
 
         protected void ContinueButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Menu.aspx");
+            Response.Redirect("~/Menu.aspx");
         }
 
         protected void PaymentButton_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace Planet_Pizza_Project
                 itemNamesList.Add(itemName);
             }
             Session["itemNames"] = itemNamesList;
-            Response.Redirect("Payment.aspx");
+            Response.Redirect("~/Payment.aspx");
         }
     }
 }

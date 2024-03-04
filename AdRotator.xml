@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+	<Ad>
+		<ImageUrl>/images/adrotator/adrotator1.png</ImageUrl>
+		<NavigateUrl>Menu.aspx</NavigateUrl>
+	</Ad>
+	<Ad>
+		<ImageUrl>/images/adrotator/adrotator2.png</ImageUrl>
+		<NavigateUrl>Menu.aspx</NavigateUrl>
+	</Ad>
+</Advertisements>

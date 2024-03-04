@@ -34,5 +34,23 @@ namespace Planet_Pizza_Project
             Session["checkCart"] = 0;
             Response.Redirect("~/Home.aspx");
         }
+
+        protected void SubmitGoHomeButton_Click(object sender, EventArgs e)
+        {
+            string deleteQuery = "DELETE FROM Orders";
+            string insertQuery = "INSERT INTO Reviews VALUES(@name, @feedback, @date, @time)";
+            SqlCommand cmd1 = new SqlCommand(deleteQuery, con);
+            SqlCommand cmd2 = new SqlCommand(insertQuery, con);
+            cmd2.Parameters.AddWithValue("@name", Session["name"].ToString());
+            cmd2.Parameters.AddWithValue("@feedback", FeedbackTextBox.Text);
+            cmd2.Parameters.AddWithValue("@date", DateTime.Now.ToString("dd-MM-yyyy"));
+            cmd2.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"));
+            con.Open();
+            cmd1.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
+            con.Close();
+            Session["checkCart"] = 0;
+            Response.Redirect("~/Home.aspx");
+        }
     }
 }

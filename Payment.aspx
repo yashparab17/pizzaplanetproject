@@ -38,7 +38,11 @@
             </div>
             <asp:Label ID="FeedbackLabel" runat="server" Text="Please provide us feedback, if any!" CssClass="profilelabel"></asp:Label>
             <asp:TextBox ID="FeedbackTextBox" runat="server" TextMode="MultiLine" CssClass="feedback"></asp:TextBox>
-            <asp:Button ID="GoHomeButton" runat="server" Text="Go to Homepage" CssClass="workbutton" OnClick="GoHomeButton_Click"/>
+            <div class="cartbuttons">
+                <asp:Button ID="GoHomeButton" runat="server" Text="Go to Homepage" CssClass="workbutton" OnClick="GoHomeButton_Click"/>
+                <asp:Button ID="SubmitGoHomeButton" runat="server" Text="Submit Feedback and Go To Homepage" CssClass="workbutton" OnClick="SubmitGoHomeButton_Click"/>
+            </div>
+            
         </div>
     </form>
 </body>

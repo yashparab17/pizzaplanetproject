@@ -4,11 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Planet_Pizza_Project
 {
     public partial class WebForm7 : System.Web.UI.Page
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\App_Data\PlanetPizzaDatabase.mdf;Integrated Security=True");
+        int totalPrice = 100;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -32,8 +36,6 @@ namespace Planet_Pizza_Project
 
         protected void UpdatePrice()
         {
-            int totalPrice = 100;
-
             if (TypeList.SelectedValue == "2")
             {
                 totalPrice += 15;
@@ -85,13 +87,12 @@ namespace Planet_Pizza_Project
             {
                 totalPrice += 45;
             }
-
             PriceLabel.Text = "Total Price = " + totalPrice;
         }
 
         protected void TypeList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch(TypeList.SelectedValue)
+            switch (TypeList.SelectedValue)
             {
                 case "1":
                     TypeNY.Visible = true;
@@ -171,7 +172,7 @@ namespace Planet_Pizza_Project
             ToppingM.Visible = false;
             ToppingP.Visible = false;
             ToppingV.Visible = false;
-            foreach(ListItem item in ToppingsList.Items)
+            foreach (ListItem item in ToppingsList.Items)
             {
                 if (item.Selected)
                 {
@@ -201,6 +202,27 @@ namespace Planet_Pizza_Project
                 }
             }
             UpdatePrice();
+        }
+
+        protected void AddToCartButton_Click(object sender, EventArgs e)
+        {
+            if (Session["email"] != null)
+            {
+                Session["checkCart"] = 1;
+                string query = "INSERT INTO Orders VALUES(@pizzaImage, @pizzaName, @pizzaPrice)";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@pizzaImage", "/images/customize/type1.png");
+                cmd.Parameters.AddWithValue("@pizzaName", CustomizedNameTextBox.Text);
+                cmd.Parameters.AddWithValue("@pizzaPrice", totalPrice);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                Response.Redirect("Cart.aspx");
+                con.Close();
+            }
+            else
+            {
+                Response.Redirect("SignIn.aspx");
+            }
         }
     }
 }

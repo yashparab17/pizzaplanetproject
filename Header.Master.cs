@@ -70,7 +70,7 @@ namespace Planet_Pizza_Project
         }
         protected void NavButton3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/About.aspx");
+            Response.Redirect("~/Reviews.aspx");
         }
     }
 }

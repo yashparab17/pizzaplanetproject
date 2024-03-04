@@ -10,7 +10,7 @@
         <asp:MultiView ID="MultiView1" ActiveViewIndex="0" runat="server">
             <asp:View ID="View1" runat="server">
                 <div class="signupgrid">
-                    <asp:Label ID="NameLabel" runat="server" Text="Name" CssClass="validatelabel"></asp:Label>
+                    <asp:Label ID="NameLabel" runat="server" Text="Name (Full Name)" CssClass="validatelabel"></asp:Label>
                     <asp:TextBox ID="NameTextBox" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="NameTextBox" ErrorMessage="Name is required." CssClass="validate"></asp:RequiredFieldValidator>
                     <div></div>

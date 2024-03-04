@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdRotator.xml" />
     <Content Include="App_Data\PlanetPizzaDatabase.mdf" />
     <Content Include="App_Data\PlanetPizzaDatabase_log.ldf">
       <DependentUpon>PlanetPizzaDatabase.mdf</DependentUpon>
@@ -113,6 +114,7 @@
     <Content Include="Profile.aspx" />
     <Content Include="Status.aspx" />
     <Content Include="Customize.aspx" />
+    <Content Include="Reviews.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cart.aspx.cs">
@@ -185,6 +187,13 @@
     </Compile>
     <Compile Include="Customize.aspx.designer.cs">
       <DependentUpon>Customize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reviews.aspx.cs">
+      <DependentUpon>Reviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviews.aspx.designer.cs">
+      <DependentUpon>Reviews.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
