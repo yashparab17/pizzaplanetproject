@@ -432,11 +432,15 @@ nav {
 }
 
 .customizeimage {
-    position: absolute;
+    position: relative;
+    width: 200px;
+    height: 200px;
 }
 
-.customizeimagerelative {
-    position: relative;
+.customizeimageabsolute {
+    position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
 }

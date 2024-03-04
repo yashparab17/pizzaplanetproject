@@ -87,22 +87,22 @@ namespace Planet_Pizza_Project
         protected global::System.Web.UI.WebControls.CheckBoxList ToppingsList;
 
         /// <summary>
-        /// TypeNYS control.
+        /// ImageDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image TypeNYS;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ImageDiv;
 
         /// <summary>
-        /// TypeDD control.
+        /// TypeNY control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image TypeDD;
+        protected global::System.Web.UI.WebControls.Image TypeNY;
 
         /// <summary>
         /// TypeCB control.
@@ -114,13 +114,13 @@ namespace Planet_Pizza_Project
         protected global::System.Web.UI.WebControls.Image TypeCB;
 
         /// <summary>
-        /// TypeBurnt control.
+        /// TypeBR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image TypeBurnt;
+        protected global::System.Web.UI.WebControls.Image TypeBR;
 
         /// <summary>
         /// CrustHT control.
@@ -132,58 +132,31 @@ namespace Planet_Pizza_Project
         protected global::System.Web.UI.WebControls.Image CrustHT;
 
         /// <summary>
-        /// CrustThin control.
+        /// CrustTC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image CrustThin;
+        protected global::System.Web.UI.WebControls.Image CrustTC;
 
         /// <summary>
-        /// CrustCheese control.
+        /// CrustCC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image CrustCheese;
+        protected global::System.Web.UI.WebControls.Image CrustCC;
 
         /// <summary>
-        /// ToppingP control.
+        /// ToppingA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ToppingP;
-
-        /// <summary>
-        /// ToppingO control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ToppingO;
-
-        /// <summary>
-        /// ToppingG control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ToppingG;
-
-        /// <summary>
-        /// ToppingJ control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ToppingJ;
+        protected global::System.Web.UI.WebControls.Image ToppingA;
 
         /// <summary>
         /// ToppingC control.
@@ -195,6 +168,15 @@ namespace Planet_Pizza_Project
         protected global::System.Web.UI.WebControls.Image ToppingC;
 
         /// <summary>
+        /// ToppingJ control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ToppingJ;
+
+        /// <summary>
         /// ToppingM control.
         /// </summary>
         /// <remarks>
@@ -204,12 +186,30 @@ namespace Planet_Pizza_Project
         protected global::System.Web.UI.WebControls.Image ToppingM;
 
         /// <summary>
-        /// ToppingA control.
+        /// ToppingP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ToppingA;
+        protected global::System.Web.UI.WebControls.Image ToppingP;
+
+        /// <summary>
+        /// ToppingV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ToppingV;
+
+        /// <summary>
+        /// PriceLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PriceLabel;
     }
 }

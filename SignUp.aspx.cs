@@ -19,7 +19,7 @@ namespace Planet_Pizza_Project
 
         protected void SignUpButton_Click(object sender, EventArgs e)
         {
-            string query = "insert into Accounts values('" + NameTextBox.Text + "','" + EmailTextBox.Text + "','" + PasswordTextBox.Text + "','" + MobileTextBox.Text + "','" + AddressTextBox.Text + "')";
+            string query = "INSERT INTO Accounts VALUES('" + NameTextBox.Text + "','" + EmailTextBox.Text + "','" + PasswordTextBox.Text + "','" + MobileTextBox.Text + "','" + AddressTextBox.Text + "')";
 
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();

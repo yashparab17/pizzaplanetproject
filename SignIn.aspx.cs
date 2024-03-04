@@ -26,7 +26,15 @@ namespace Planet_Pizza_Project
             if (reader.Read())
             {
                 string name = reader["name"].ToString();
+                string email = reader["email"].ToString();
+                string password = reader["password"].ToString();
+                string mobile = reader["mobile"].ToString();
+                string address = reader["address"].ToString();
                 Session["name"] = name;
+                Session["email"] = email;
+                Session["password"] = password;
+                Session["mobile"] = mobile;
+                Session["address"] = address;
                 reader.Close();
                 con.Close();
                 Response.Redirect("Home.aspx");

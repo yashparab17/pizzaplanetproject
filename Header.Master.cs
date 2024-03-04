@@ -11,7 +11,7 @@ namespace Planet_Pizza_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["name"] != null)
+            if (Session["email"] != null)
             {
                 SignUpButton.Visible = false;
                 SignInButton.Visible = false;

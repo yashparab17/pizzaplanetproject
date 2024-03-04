@@ -17,6 +17,7 @@
                         <asp:Image ID="PizzaImage" runat="server" ImageUrl='<%# Eval("imagepath") %>' />
                         <asp:Label ID="PizzaLabel" runat="server" Text='<%# Eval("name") + " Pizza" %>' CssClass="pizzalabel"></asp:Label>
                         <asp:Label ID="PriceLabel" runat="server" Text='<%# "Rs. " + Eval("price") %>' CssClass="pizzalabel"></asp:Label>
+                        <asp:Button ID="AddToCartPizzaButton" runat="server" Text="Add to Cart" CssClass="workbutton" CommandArgument='<%# Eval("id") %>' OnClick="AddToCartPizzaButton_Click" />
                     </div>
                 </ItemTemplate>
             </asp:DataList>
@@ -31,6 +32,7 @@
                         <asp:Image ID="PizzaImage" runat="server" ImageUrl='<%# Eval("imagepath") %>' />
                         <asp:Label ID="PizzaLabel" runat="server" Text='<%# Eval("name") + " Pizza" %>' CssClass="pizzalabel"></asp:Label>
                         <asp:Label ID="PriceLabel" runat="server" Text='<%# "Rs. " + Eval("price") %>' CssClass="pizzalabel"></asp:Label>
+                        <asp:Button ID="AddToCartPizzaButton" runat="server" Text="Add to Cart" CssClass="workbutton" CommandArgument='<%# Eval("id") %>' OnClick="AddToCartPizzaButton_Click" />
                     </div>
                 </ItemTemplate>
             </asp:DataList>
@@ -45,6 +47,7 @@
                         <asp:Image ID="SidesImage" runat="server" ImageUrl='<%# Eval("imagepath") %>' />
                         <asp:Label ID="SidesLabel" runat="server" Text='<%# Eval("name") %>' CssClass="pizzalabel"></asp:Label>
                         <asp:Label ID="SidesPriceLabel" runat="server" Text='<%# "Rs. " + Eval("price") %>' CssClass="pizzalabel"></asp:Label>
+                        <asp:Button ID="AddToCartSideButton" runat="server" Text="Add to Cart" CssClass="workbutton" CommandArgument='<%# Eval("id") %>' OnClick="AddToCartSideButton_Click"/>
                     </div>
                 </ItemTemplate>
             </asp:DataList>

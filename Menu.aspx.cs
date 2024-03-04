@@ -38,5 +38,63 @@ namespace Planet_Pizza_Project
                 SidesDataList.DataBind();
             }
         }
+
+        protected void AddToCartPizzaButton_Click(object sender, EventArgs e)
+        {
+            if (Session["email"] != null)
+            {
+                Button button = (Button)sender;
+                string pizzaID = button.CommandArgument.ToString();
+                string query1 = "SELECT * FROM Pizzas WHERE ID = '" + pizzaID + "'";
+                SqlCommand cmd1 = new SqlCommand(query1, con);
+                con.Open();
+                SqlDataReader reader = cmd1.ExecuteReader();
+                if (reader.Read())
+                {
+                    string pizzaName = reader["name"].ToString();
+                    int pizzaPrice = Convert.ToInt32(reader["price"]);
+                    reader.Close();
+                    string query2 = "INSERT INTO Orders (itemName, itemPrice) VALUES(@pizzaName, @pizzaPrice)";
+                    SqlCommand cmd2 = new SqlCommand(query2, con);
+                    cmd2.Parameters.AddWithValue("@pizzaName", pizzaName);
+                    cmd2.Parameters.AddWithValue("@pizzaPrice", pizzaPrice);
+                    cmd2.ExecuteNonQuery();
+                    Response.Redirect("Home.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("SignIn.aspx");
+            }
+        }
+
+        protected void AddToCartSideButton_Click(object sender, EventArgs e)
+        {
+            if (Session["email"] != null)
+            {
+                Button button = (Button)sender;
+                string sideID = button.CommandArgument.ToString();
+                string query1 = "SELECT * FROM Sides WHERE ID = '" + sideID + "'";
+                SqlCommand cmd1 = new SqlCommand(query1, con);
+                con.Open();
+                SqlDataReader reader = cmd1.ExecuteReader();
+                if (reader.Read())
+                {
+                    string sideName = reader["name"].ToString();
+                    int sidePrice = Convert.ToInt32(reader["price"]);
+                    reader.Close();
+                    string query2 = "INSERT INTO Orders (itemName, itemPrice) VALUES(@sideName, @sidePrice)";
+                    SqlCommand cmd2 = new SqlCommand(query2, con);
+                    cmd2.Parameters.AddWithValue("@sideName", sideName);
+                    cmd2.Parameters.AddWithValue("@sidePrice", sidePrice);
+                    cmd2.ExecuteNonQuery();
+                    Response.Redirect("Home.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("SignIn.aspx");
+            }
+        }
     }
 }
