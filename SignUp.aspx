@@ -29,7 +29,7 @@
                     <asp:Label ID="MobileLabel" runat="server" Text="Mobile Number" CssClass="validatelabel"></asp:Label>
                     <asp:TextBox ID="MobileTextBox" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="MobileTextBox" ErrorMessage="Mobile Number is required." CssClass="validate"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="MobileTextBox" ErrorMessage="Mobile Number must be valid!" ValidationExpression="\d[10]" CssClass="validate additionalvalidator"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="MobileTextBox" ErrorMessage="Mobile Number must be valid!" ValidationExpression="\d{10}" CssClass="validate additionalvalidator"></asp:RegularExpressionValidator>
                     <asp:Label ID="AddressLabel" runat="server" Text="Address" CssClass="validatelabel"></asp:Label>
                     <asp:TextBox ID="AddressTextBox" runat="server" TextMode="Multiline"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="AddressTextBox" ErrorMessage="Address is required." CssClass="validate"></asp:RequiredFieldValidator>
