@@ -102,7 +102,6 @@
     <Content Include="images\sides\side2.png" />
     <Content Include="images\sides\side1.png" />
     <Content Include="images\sides\side3.png" />
-    <Content Include="images\sides\side3.png" />
     <Content Include="modern-normalize.css" />
     <Content Include="Payment.aspx" />
     <Content Include="styles.css" />
