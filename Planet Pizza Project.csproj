@@ -74,6 +74,7 @@
     </Content>
     <Content Include="background\stars.webm" />
     <Content Include="Cart.aspx" />
+    <Content Include="Customize.aspx" />
     <Content Include="images\customize\crust1.png" />
     <Content Include="images\customize\crust2.png" />
     <Content Include="images\customize\crust3.png" />

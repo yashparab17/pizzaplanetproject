@@ -180,28 +180,33 @@ namespace Planet_Pizza_Project
                     {
                         case "A":
                             ToppingA.Visible = true;
+                            UpdatePrice();
                             break;
                         case "C":
                             ToppingC.Visible = true;
+                            UpdatePrice();
                             break;
                         case "J":
                             ToppingJ.Visible = true;
+                            UpdatePrice();
                             break;
                         case "M":
                             ToppingM.Visible = true;
+                            UpdatePrice();
                             break;
                         case "P":
                             ToppingP.Visible = true;
+                            UpdatePrice();
                             break;
                         case "V":
                             ToppingV.Visible = true;
+                            UpdatePrice();
                             break;
                         default:
                             break;
                     }
                 }
             }
-            UpdatePrice();
         }
 
         protected void AddToCartButton_Click(object sender, EventArgs e)
@@ -209,12 +214,11 @@ namespace Planet_Pizza_Project
             if (Session["email"] != null)
             {
                 Session["checkCart"] = 1;
-                int finalPrice = Convert.ToInt32(PriceLabel.Text);
                 string query = "INSERT INTO Orders VALUES(@pizzaImage, @pizzaName, @pizzaPrice)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@pizzaImage", "/images/customize/type1.png");
                 cmd.Parameters.AddWithValue("@pizzaName", CustomizedNameTextBox.Text);
-                cmd.Parameters.AddWithValue("@pizzaPrice", finalPrice);
+                cmd.Parameters.AddWithValue("@pizzaPrice", totalPrice);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 Response.Redirect("Cart.aspx");
