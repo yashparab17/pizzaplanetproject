@@ -16,7 +16,11 @@ namespace Planet_Pizza_Project
         {
             if (!IsPostBack)
             {
-                if (Convert.ToInt32(Session["checkCart"]) == 1)
+                string checkQuery = "SELECT COUNT(*) FROM Orders";
+                SqlCommand cmd1 = new SqlCommand(checkQuery, con);
+                con.Open();
+                int rowCount = Convert.ToInt32(cmd1.ExecuteScalar());
+                if (rowCount > 0)
                 {
                     NoItemsLabel.Visible = false;
                     GoBackButton.Visible = false;
@@ -27,17 +31,18 @@ namespace Planet_Pizza_Project
                     CartDataList.DataSource = orderTable;
                     CartDataList.DataBind();
                     string sumQuery = "SELECT SUM(itemPrice) FROM Orders";
-                    SqlCommand cmd = new SqlCommand(sumQuery, con);
-                    con.Open();
-                    int totalAmount = Convert.ToInt32(cmd.ExecuteScalar());
+                    SqlCommand cmd2 = new SqlCommand(sumQuery, con);
+                    int totalAmount = Convert.ToInt32(cmd2.ExecuteScalar());
                     TotalAmountLabel.Text = "Total Amount Payable: Rs. " + totalAmount;
                 }
                 else
                 {
+                    NoItemsLabel.Visible = true;
                     CartDiv.Visible = false;
                     AmountDiv.Visible = false;
                     ButtonsDiv.Visible = false;
                 }
+                con.Close();
             }
         }
 
@@ -63,6 +68,18 @@ namespace Planet_Pizza_Project
             }
             Session["itemNames"] = itemNamesList;
             Response.Redirect("~/Payment.aspx");
+        }
+
+        protected void DeleteItem_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            string orderID = button.CommandArgument.ToString();
+            string deleteQuery = "DELETE FROM Orders WHERE id = '" + orderID + "'";
+            SqlCommand cmd = new SqlCommand(deleteQuery, con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Redirect("~/Cart.aspx");
         }
     }
 }

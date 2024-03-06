@@ -17,9 +17,27 @@ namespace Planet_Pizza_Project
                 SignInButton.Visible = false;
                 Label1.Visible = true;
                 Label1.Text = "Welcome " + Session["name"];
-                SignOutButton.Visible = true;
-                UserProfileButton.Visible = true;
-                ViewCartButton.Visible = true;
+                if (Session["email"].ToString() == "admin@gmail.com")
+                {
+                    SignOutButton.Visible = true;
+                    UserProfileButton.Visible = false;
+                    ViewCartButton.Visible = false;
+                    NavButton1.Visible = false;
+                    NavButton2.Visible = false;
+                    NavButton3.Visible = false;
+                    NavButton4.Visible = true;
+                    NavButton5.Visible = true;
+                }
+                else
+                {
+                    UserProfileButton.Visible = true;
+                    ViewCartButton.Visible = true;
+                    NavButton1.Visible = true;
+                    NavButton2.Visible = true;
+                    NavButton3.Visible = true;
+                    NavButton4.Visible = false;
+                    NavButton5.Visible = false;
+                }
             }
             else
             {
@@ -27,6 +45,11 @@ namespace Planet_Pizza_Project
                 SignOutButton.Visible = false;
                 UserProfileButton.Visible = false;
                 ViewCartButton.Visible = false;
+                NavButton1.Visible = true;
+                NavButton2.Visible = false;
+                NavButton3.Visible = true;
+                NavButton4.Visible = false;
+                NavButton5.Visible = false;
             }
         }
 
@@ -48,6 +71,11 @@ namespace Planet_Pizza_Project
             Label1.Visible = false;
             SignOutButton.Visible = false;
             UserProfileButton.Visible = false;
+            ViewCartButton.Visible = false;
+            NavButton2.Visible = false;
+            NavButton4.Visible = false;
+            NavButton5.Visible = false;
+            Response.Redirect("~/Home.aspx");
         }
 
         protected void UserProfileButton_Click(object sender, EventArgs e)
@@ -70,7 +98,17 @@ namespace Planet_Pizza_Project
         }
         protected void NavButton3_Click(object sender, EventArgs e)
         {
+            Response.Redirect("~/About.aspx");
+        }
+
+        protected void NavButton4_Click(object sender, EventArgs e)
+        {
             Response.Redirect("~/Reviews.aspx");
+        }
+
+        protected void NavButton5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin.aspx");
         }
     }
 }

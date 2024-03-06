@@ -11,7 +11,7 @@
             <h1>Vegetarian Pizzas</h1>
         </div>
         <div class="pizzaflex">
-            <asp:DataList ID="VegDataList" runat="server" RepeatDirection="Horizontal">
+            <asp:DataList ID="VegDataList" runat="server" RepeatDirection="Horizontal" RepeatColumns="5">
                 <ItemTemplate>
                     <div class="pizzaitem">
                         <asp:Image ID="PizzaImage" runat="server" ImageUrl='<%# Eval("imagepath") %>' />
@@ -26,7 +26,7 @@
             <h1>Non-Vegetarian Pizzas</h1>
         </div>
         <div class="pizzaflex">
-            <asp:DataList ID="NonVegDataList" runat="server" RepeatDirection="Horizontal">
+            <asp:DataList ID="NonVegDataList" runat="server" RepeatDirection="Horizontal" RepeatColumns="5">
                 <ItemTemplate>
                     <div class="pizzaitem">
                         <asp:Image ID="PizzaImage" runat="server" ImageUrl='<%# Eval("imagepath") %>' />
@@ -41,7 +41,7 @@
             <h1>Sides</h1>
         </div>
         <div class="pizzaflex">
-            <asp:DataList ID="SidesDataList" runat="server" RepeatDirection="Horizontal">
+            <asp:DataList ID="SidesDataList" runat="server" RepeatDirection="Horizontal" RepeatColumns="5">
                 <ItemTemplate>
                     <div class="pizzaitem">
                         <asp:Image ID="SidesImage" runat="server" ImageUrl='<%# Eval("imagepath") %>' />

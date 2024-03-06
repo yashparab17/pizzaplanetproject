@@ -63,29 +63,32 @@ namespace Planet_Pizza_Project
                 totalPrice += 20;
             }
 
-            if (ToppingsList.SelectedValue == "A")
+            foreach (ListItem item in ToppingsList.Items)
             {
-                totalPrice += 40;
-            }
-            if (ToppingsList.SelectedValue == "C")
-            {
-                totalPrice += 50;
-            }
-            if (ToppingsList.SelectedValue == "J")
-            {
-                totalPrice += 25;
-            }
-            if (ToppingsList.SelectedValue == "M")
-            {
-                totalPrice += 45;
-            }
-            if (ToppingsList.SelectedValue == "P")
-            {
-                totalPrice += 30;
-            }
-            if (ToppingsList.SelectedValue == "V")
-            {
-                totalPrice += 45;
+                if (item.Selected)
+                {
+                    switch (item.Value)
+                    {
+                        case "A":
+                            totalPrice += 40;
+                            break;
+                        case "C":
+                            totalPrice += 50;
+                            break;
+                        case "J":
+                            totalPrice += 25;
+                            break;
+                        case "M":
+                            totalPrice += 45;
+                            break;
+                        case "P":
+                            totalPrice += 30;
+                            break;
+                        case "V":
+                            totalPrice += 45;
+                            break;
+                    }
+                }
             }
             PriceLabel.Text = "Total Price = " + totalPrice;
         }
@@ -180,33 +183,28 @@ namespace Planet_Pizza_Project
                     {
                         case "A":
                             ToppingA.Visible = true;
-                            UpdatePrice();
                             break;
                         case "C":
                             ToppingC.Visible = true;
-                            UpdatePrice();
                             break;
                         case "J":
                             ToppingJ.Visible = true;
-                            UpdatePrice();
                             break;
                         case "M":
                             ToppingM.Visible = true;
-                            UpdatePrice();
                             break;
                         case "P":
                             ToppingP.Visible = true;
-                            UpdatePrice();
                             break;
                         case "V":
                             ToppingV.Visible = true;
-                            UpdatePrice();
                             break;
                         default:
                             break;
                     }
                 }
             }
+            UpdatePrice();
         }
 
         protected void AddToCartButton_Click(object sender, EventArgs e)
@@ -214,11 +212,13 @@ namespace Planet_Pizza_Project
             if (Session["email"] != null)
             {
                 Session["checkCart"] = 1;
+                string[] finalPriceArray = PriceLabel.Text.Split('=');
+                int finalPrice = Convert.ToInt32(finalPriceArray[1].Trim());
                 string query = "INSERT INTO Orders VALUES(@pizzaImage, @pizzaName, @pizzaPrice)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@pizzaImage", "/images/customize/type1.png");
                 cmd.Parameters.AddWithValue("@pizzaName", CustomizedNameTextBox.Text);
-                cmd.Parameters.AddWithValue("@pizzaPrice", totalPrice);
+                cmd.Parameters.AddWithValue("@pizzaPrice", finalPrice);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 Response.Redirect("Cart.aspx");

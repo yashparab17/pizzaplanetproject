@@ -27,6 +27,7 @@
                             <asp:Image ID="ItemImage" runat="server" ImageUrl='<%# Eval("itemImage") %>' />
                             <asp:Label ID="ItemName" runat="server" Text='<%# Eval("itemName") %>' CssClass="cartlabel"></asp:Label>
                             <asp:Label ID="ItemPrice" runat="server" Text='<%# "Rs. " + Eval("itemPrice") %>' CssClass="cartlabel"></asp:Label>
+                            <asp:Button ID="DeleteItem" runat="server" Text="X" CssClass="workbutton" CommandArgument='<%# Eval("id") %>' OnClick="DeleteItem_Click" />
                         </div>
                     </ItemTemplate>
                 </asp:DataList>

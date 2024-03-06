@@ -11,8 +11,17 @@ namespace Planet_Pizza_Project
 {
 
 
-    public partial class WebForm4
+    public partial class SignIn
     {
+
+        /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// EmailLabel control.
@@ -75,7 +84,7 @@ namespace Planet_Pizza_Project
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SignIn;
+        protected global::System.Web.UI.WebControls.Button SignInButton;
 
         /// <summary>
         /// Status control.

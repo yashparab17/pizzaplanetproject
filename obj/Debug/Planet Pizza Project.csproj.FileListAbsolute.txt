@@ -1,3 +1,4 @@
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.csproj.CoreCompileInputs.cache
 O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\Planet Pizza Project.dll.config
 O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\Planet Pizza Project.dll
 O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\Planet Pizza Project.pdb
@@ -52,8 +53,7 @@ O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\VBCSCompiler
 O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\roslyn\VBCSCompiler.exe.config
 O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.csproj.AssemblyReference.cache
-O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.csproj.CoreCompileInputs.cache
 O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.csproj.CopyComplete
 O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.dll
 O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.pdb
+O:\BCA Material\Semester IV\ASP.NET\Planet Pizza Project\obj\Debug\Planet Pizza Project.csproj.AssemblyReference.cache
