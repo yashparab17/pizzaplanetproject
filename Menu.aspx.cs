@@ -52,14 +52,18 @@ namespace Planet_Pizza_Project
                 if (reader.Read())
                 {
                     string pizzaImage = reader["imagepath"].ToString();
+                    string receiverEmail = Session["email"].ToString();
                     string pizzaName = reader["pizzaName"].ToString();
                     int pizzaPrice = Convert.ToInt32(reader["pizzaPrice"]);
+                    string dateTime = System.DateTime.Now.ToString();
                     reader.Close();
-                    string insertQuery = "INSERT INTO Orders VALUES(@pizzaImage, @pizzaName, @pizzaPrice)";
+                    string insertQuery = "INSERT INTO TempOrders VALUES(@pizzaImage, @receiverEmail, @pizzaName, @pizzaPrice, @dateTime)";
                     SqlCommand cmd2 = new SqlCommand(insertQuery, con);
                     cmd2.Parameters.AddWithValue("@pizzaImage", pizzaImage);
+                    cmd2.Parameters.AddWithValue("@receiverEmail", receiverEmail);
                     cmd2.Parameters.AddWithValue("@pizzaName", pizzaName);
                     cmd2.Parameters.AddWithValue("@pizzaPrice", pizzaPrice);
+                    cmd2.Parameters.AddWithValue("@dateTime", dateTime);
                     cmd2.ExecuteNonQuery();
                     Response.Redirect("Cart.aspx");
                 }
@@ -84,14 +88,18 @@ namespace Planet_Pizza_Project
                 if (reader.Read())
                 {
                     string sideImage = reader["imagepath"].ToString();
+                    string receiverEmail = reader["receiverEmail"].ToString();
                     string sideName = reader["sideName"].ToString();
                     int sidePrice = Convert.ToInt32(reader["sidePrice"]);
+                    string dateTime = System.DateTime.Now.ToString();
                     reader.Close();
-                    string insertQuery = "INSERT INTO Orders VALUES(@sideImage, @sideName, @sidePrice)";
+                    string insertQuery = "INSERT INTO TempOrders VALUES(@sideImage, @receiverEmail, @sideName, @sidePrice, @dateTime)";
                     SqlCommand cmd2 = new SqlCommand(insertQuery, con);
                     cmd2.Parameters.AddWithValue("@sideImage", sideImage);
+                    cmd2.Parameters.AddWithValue("@receiverEmail", receiverEmail);
                     cmd2.Parameters.AddWithValue("@sideName", sideName);
                     cmd2.Parameters.AddWithValue("@sidePrice", sidePrice);
+                    cmd2.Parameters.AddWithValue("@dateTime", dateTime);
                     cmd2.ExecuteNonQuery();
                     Response.Redirect("Cart.aspx");
                 }

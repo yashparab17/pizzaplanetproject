@@ -20,7 +20,7 @@ namespace Planet_Pizza_Project
         protected void SignInButton_Click(object sender, EventArgs e)
         {
             string selectQuery = "SELECT * FROM Accounts WHERE email = '" + EmailTextBox.Text + "' AND password = '" + PasswordTextBox.Text + "'";
-            string removeCartQuery = "DELETE FROM Orders";
+            string removeCartQuery = "DELETE FROM TempOrders";
             SqlCommand cmd1 = new SqlCommand(selectQuery, con);
             SqlCommand cmd2 = new SqlCommand(removeCartQuery, con);
             con.Open();

@@ -19,17 +19,25 @@ namespace Planet_Pizza_Project
             StatusSide.Visible = false;
             if (!IsPostBack)
             {
-                string selectQuery = "SELECT * FROM Accounts";
+                string selectAccountsQuery = "SELECT * FROM Accounts";
+                string selectOrdersQuery = "SELECT * FROM Orders";
                 DataTable userTable = new DataTable();
-                SqlCommand cmd = new SqlCommand(selectQuery, con);
-                SqlDataAdapter userAdapter = new SqlDataAdapter(selectQuery, con);
+                DataTable orderTable = new DataTable();
+                SqlDataAdapter userAdapter = new SqlDataAdapter(selectAccountsQuery, con);
+                SqlDataAdapter orderAdapter = new SqlDataAdapter(selectOrdersQuery, con);
                 con.Open();
                 userAdapter.Fill(userTable);
+                orderAdapter.Fill(orderTable);
                 con.Close();
                 if (userTable.Rows.Count > 0)
                 {
                     UserDetailsGridView.DataSource = userTable;
                     UserDetailsGridView.DataBind();
+                }
+                if (orderTable.Rows.Count > 0)
+                {
+                    OrderDetailsGridView.DataSource = orderTable;
+                    OrderDetailsGridView.DataBind();
                 }
             }
         }

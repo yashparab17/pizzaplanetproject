@@ -26,30 +26,34 @@ namespace Planet_Pizza_Project
 
         protected void GoHomeButton_Click(object sender, EventArgs e)
         {
-            string query = "DELETE FROM Orders";
-            SqlCommand cmd = new SqlCommand(query, con);
+            string insertOrdersQuery = "INSERT INTO Orders (orderID, receiverEmail, itemName, itemPrice) SELECT id, receiverEmail, itemName, itemPrice FROM TempOrders";
+            string deleteQuery = "DELETE FROM TempOrders";
+            SqlCommand cmd1 = new SqlCommand(insertOrdersQuery, con);
+            SqlCommand cmd2 = new SqlCommand(deleteQuery, con);
             con.Open();
-            cmd.ExecuteNonQuery();
+            cmd1.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
             con.Close();
-            Session["checkCart"] = 0;
             Response.Redirect("~/Home.aspx");
         }
 
         protected void SubmitGoHomeButton_Click(object sender, EventArgs e)
         {
-            string deleteQuery = "DELETE FROM Orders";
-            string insertQuery = "INSERT INTO Reviews VALUES(@name, @feedback, @date, @time)";
-            SqlCommand cmd1 = new SqlCommand(deleteQuery, con);
-            SqlCommand cmd2 = new SqlCommand(insertQuery, con);
-            cmd2.Parameters.AddWithValue("@name", Session["name"].ToString());
-            cmd2.Parameters.AddWithValue("@feedback", FeedbackTextBox.Text);
-            cmd2.Parameters.AddWithValue("@date", DateTime.Now.ToString("dd-MM-yyyy"));
-            cmd2.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"));
             con.Open();
+            string insertOrdersQuery = "INSERT INTO Orders (orderID, receiverEmail, itemName, itemPrice) SELECT id, receiverEmail, itemName, itemPrice FROM TempOrders";
+            string deleteQuery = "DELETE FROM TempOrders";
+            string insertReviewsQuery = "INSERT INTO Reviews VALUES(@name, @feedback, @date, @time)";
+            SqlCommand cmd1 = new SqlCommand(insertOrdersQuery, con);
+            SqlCommand cmd2 = new SqlCommand(deleteQuery, con);
+            SqlCommand cmd3 = new SqlCommand(insertReviewsQuery, con);
+            cmd3.Parameters.AddWithValue("@name", Session["name"].ToString());
+            cmd3.Parameters.AddWithValue("@feedback", FeedbackTextBox.Text);
+            cmd3.Parameters.AddWithValue("@date", DateTime.Now.ToString("dd-MM-yyyy"));
+            cmd3.Parameters.AddWithValue("@time", DateTime.Now.ToString("HH:mm:ss"));
             cmd1.ExecuteNonQuery();
             cmd2.ExecuteNonQuery();
+            cmd3.ExecuteNonQuery();
             con.Close();
-            Session["checkCart"] = 0;
             Response.Redirect("~/Home.aspx");
         }
     }

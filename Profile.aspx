@@ -20,7 +20,6 @@
         </div>
         <div class="buttons">
             <asp:Button ID="UpdateButton" runat="server" Text="Update Details" CssClass="workbutton" OnClick="UpdateButton_Click" />
-            <asp:Button ID="DeleteButton" runat="server" Text="Delete Account" CssClass="workbutton" />
         </div>
     </div>
     <div id="UpdateDetailsDiv" class="container profile" runat="server">

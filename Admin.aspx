@@ -8,7 +8,7 @@
             <h1>Admin Control</h1>
         </div>
         <div class="title">
-            <h1>View User Details</h1>
+            <h1>User Details</h1>
         </div>
         <div>
             <asp:GridView ID="UserDetailsGridView" runat="server" AutoGenerateColumns="false" CssClass="usergridview">
@@ -25,9 +25,24 @@
             </asp:GridView>
         </div>
         <div class="title">
+            <h1>Order Details</h1>
+        </div>
+        <div>
+            <asp:GridView ID="OrderDetailsGridView" runat="server" AutoGenerateColumns="false" CssClass="usergridview">
+                <Columns>
+                    <asp:BoundField DataField="id" HeaderText="Row ID" />
+                    <asp:BoundField DataField="orderID" HeaderText="Order ID" />
+                    <asp:BoundField DataField="receiverEmail" HeaderText="Receiver Email ID" />
+                    <asp:BoundField DataField="itemName" HeaderText="Item Name" />
+                    <asp:BoundField DataField="itemPrice" HeaderText="itemPrice" />
+                </Columns>
+                <HeaderStyle Font-Bold="true" BackColor="#E8B68B" />
+                <RowStyle BackColor="#FFFFFF" />
+            </asp:GridView>
+        </div>
+        <div class="title">
             <h1>Add Pizza</h1>
         </div>
-
         <div class="updatedetails">
             <asp:Label ID="PizzaNameLabel" runat="server" Text="Pizza Name" CssClass="validatelabel"></asp:Label>
             <asp:TextBox ID="PizzaNameTextBox" runat="server"></asp:TextBox>

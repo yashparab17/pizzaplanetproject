@@ -16,7 +16,7 @@ namespace Planet_Pizza_Project
         {
             if (!IsPostBack)
             {
-                string checkQuery = "SELECT COUNT(*) FROM Orders";
+                string checkQuery = "SELECT COUNT(*) FROM TempOrders";
                 SqlCommand cmd1 = new SqlCommand(checkQuery, con);
                 con.Open();
                 int rowCount = Convert.ToInt32(cmd1.ExecuteScalar());
@@ -24,13 +24,13 @@ namespace Planet_Pizza_Project
                 {
                     NoItemsLabel.Visible = false;
                     GoBackButton.Visible = false;
-                    string orderQuery = "SELECT * FROM Orders";
+                    string orderQuery = "SELECT * FROM TempOrders";
                     SqlDataAdapter orderAdapter = new SqlDataAdapter(orderQuery, con);
                     DataTable orderTable = new DataTable();
                     orderAdapter.Fill(orderTable);
                     CartDataList.DataSource = orderTable;
                     CartDataList.DataBind();
-                    string sumQuery = "SELECT SUM(itemPrice) FROM Orders";
+                    string sumQuery = "SELECT SUM(itemPrice) FROM TempOrders";
                     SqlCommand cmd2 = new SqlCommand(sumQuery, con);
                     int totalAmount = Convert.ToInt32(cmd2.ExecuteScalar());
                     TotalAmountLabel.Text = "Total Amount Payable: Rs. " + totalAmount;
@@ -74,7 +74,7 @@ namespace Planet_Pizza_Project
         {
             Button button = (Button)sender;
             string orderID = button.CommandArgument.ToString();
-            string deleteQuery = "DELETE FROM Orders WHERE id = '" + orderID + "'";
+            string deleteQuery = "DELETE FROM TempOrders WHERE id = '" + orderID + "'";
             SqlCommand cmd = new SqlCommand(deleteQuery, con);
             con.Open();
             cmd.ExecuteNonQuery();
