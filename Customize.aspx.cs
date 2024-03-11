@@ -211,8 +211,17 @@ namespace Planet_Pizza_Project
         {
             if (Session["email"] != null)
             {
+                string selectedPizza = "Size: " + SizeList.SelectedValue + ", Type: " + TypeList.SelectedValue + ", Crust: " + CrustList.SelectedValue + ", Toppings: ";
+                foreach (ListItem item in ToppingsList.Items)
+                {
+                    if (item.Selected)
+                    {
+                        selectedPizza += item.Value + ", ";
+                    }
+                }
+                selectedPizza = selectedPizza.TrimEnd(' ', ',');
                 string receiverEmail = Session["email"].ToString();
-                string itemName = CustomizedNameTextBox.Text;
+                string itemName = CustomizedNameTextBox.Text + "<br>" + selectedPizza;
                 string[] finalPriceArray = PriceLabel.Text.Split('=');
                 int finalPrice = Convert.ToInt32(finalPriceArray[1].Trim());
                 string dateTime = System.DateTime.Now.ToString();
