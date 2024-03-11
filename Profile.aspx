@@ -27,19 +27,42 @@
             <h1>Update Details</h1>
         </div>
         <div class="updatedetails">
-            <asp:Label ID="UpdateName" runat="server" Text="Name"></asp:Label>
-            <asp:TextBox ID="UpdateNameTextBox" runat="server"></asp:TextBox>
-            <asp:Label ID="UpdateEmail" runat="server" Text="Email"></asp:Label>
-            <asp:TextBox ID="UpdateEmailTextBox" runat="server"></asp:TextBox>
-            <asp:Label ID="UpdatePassword" runat="server" Text="Password"></asp:Label>
-            <asp:TextBox ID="UpdatePasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
-            <asp:Label ID="UpdateConfirmPassword" runat="server" Text="Confirm Password"></asp:Label>
-            <asp:TextBox ID="UpdateConfirmPasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
-            <asp:Label ID="UpdateMobile" runat="server" Text="Mobile Number"></asp:Label>
-            <asp:TextBox ID="UpdateMobileTextBox" runat="server"></asp:TextBox>
-            <asp:Label ID="UpdateAddress" runat="server" Text="Address"></asp:Label>
-            <asp:TextBox ID="UpdateAddressTextBox" runat="server" TextMode="MultiLine"></asp:TextBox>
-            <asp:Button ID="SaveUpdateDetails" runat="server" Text="Save Updated Details" CssClass="workbutton savedetailsbutton" OnClick="SaveUpdateDetails_Click" />
+            <div class="form-group">
+                <asp:Label ID="UpdateName" runat="server" Text="Name" CssClass="validatelabel"></asp:Label>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UpdateNameTextBox" ErrorMessage="Name is required." CssClass="validate"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="UpdateNameTextBox" runat="server" CssClass="form-row"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <asp:Label ID="UpdateEmail" runat="server" Text="Email" CssClass="validatelabel"></asp:Label>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="UpdateEmailTextBox" ErrorMessage="Email is required." CssClass="validate"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="UpdateEmailTextBox" runat="server" CssClass="form-row"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="UpdateEmailTextBox" ErrorMessage="Email must be valid!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" CssClass="validate additionalvalidator"></asp:RegularExpressionValidator>
+            </div>
+            <div class="form-group">
+                <asp:Label ID="UpdatePassword" runat="server" Text="Password" CssClass="validatelabel"></asp:Label>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="UpdatePasswordTextBox" ErrorMessage="Password is required." CssClass="validate"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="UpdatePasswordTextBox" runat="server" TextMode="Password" CssClass="form-row"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <asp:Label ID="UpdateConfirmPassword" runat="server" Text="Confirm Password" CssClass="validatelabel"></asp:Label>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="UpdateConfirmPasswordTextBox" ErrorMessage="Confirm Password is required." CssClass="validate"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="UpdateConfirmPasswordTextBox" runat="server" TextMode="Password" CssClass="form-row"></asp:TextBox>
+
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="UpdateConfirmPasswordTextBox" ControlToCompare="UpdatePasswordTextBox" ErrorMessage="Passwords do not match!" CssClass="validate additionalvalidator"></asp:CompareValidator>
+            </div>
+            <div class="form-group">
+                <asp:Label ID="UpdateMobile" runat="server" Text="Mobile Number" CssClass="validatelabel"></asp:Label>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="UpdateMobileTextBox" ErrorMessage="Mobile Number is required." CssClass="validate"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="UpdateMobileTextBox" runat="server" CssClass="form-row"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="UpdateMobileTextBox" ErrorMessage="Mobile Number must be valid!" ValidationExpression="\d{10}" CssClass="validate additionalvalidator"></asp:RegularExpressionValidator>
+            </div>
+            <div class="form-group">
+                <asp:Label ID="UpdateAddress" runat="server" Text="Address" CssClass="validatelabel"></asp:Label>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="UpdateAddressTextBox" ErrorMessage="Address is required." CssClass="validate"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="UpdateAddressTextBox" runat="server" TextMode="MultiLine" CssClass="form-row"></asp:TextBox>
+            </div>
         </div>
+        <asp:Button ID="SaveUpdateDetails" runat="server" Text="Save Updated Details" CssClass="workbutton signinbutton" OnClick="SaveUpdateDetails_Click" />
+        <asp:Label ID="AlreadyExistsLabel" runat="server" CssClass="validate"></asp:Label>
     </div>
 </asp:Content>

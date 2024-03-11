@@ -19,14 +19,20 @@
                 <h1>Sign In</h1>
             </div>
             <div class="signingrid">
-                <asp:Label ID="EmailLabel" runat="server" Text="Email ID" CssClass="validatelabel"></asp:Label>
-                <asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="EmailTextBox" ErrorMessage="Email ID is required." CssClass="validate"></asp:RequiredFieldValidator>
-                <asp:Label ID="PasswordLabel" runat="server" Text="Password" CssClass="validatelabel"></asp:Label>
-                <asp:TextBox ID="PasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PasswordTextBox" ErrorMessage="Password is required." CssClass="validate"></asp:RequiredFieldValidator>
-                <asp:Button ID="SignInButton" runat="server" Text="Sign In" OnClick="SignInButton_Click" CssClass="workbutton signingridcol" />
+                <div class="form-group">
+                    <asp:Label ID="EmailLabel" runat="server" Text="Email ID" CssClass="validatelabel"></asp:Label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="EmailTextBox" ErrorMessage="Email ID is required." CssClass="validate"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="EmailTextBox" runat="server" CssClass="form-row"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="EmailTextBox" ErrorMessage="Email ID must be valid!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" CssClass="validate additionalvalidator"></asp:RegularExpressionValidator>
+                </div>
+
+                <div class="form-group">
+                    <asp:Label ID="PasswordLabel" runat="server" Text="Password" CssClass="validatelabel"></asp:Label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PasswordTextBox" ErrorMessage="Password is required." CssClass="validate"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="PasswordTextBox" runat="server" TextMode="Password" CssClass="form-row"></asp:TextBox>
+                </div>
             </div>
+            <asp:Button ID="SignInButton" runat="server" Text="Sign In" OnClick="SignInButton_Click" CssClass="workbutton signinbutton" />
             <asp:Label ID="Status" runat="server" CssClass="signinerror"></asp:Label>
         </div>
     </form>

@@ -88,6 +88,7 @@
     <Content Include="images\customize\type2.png" />
     <Content Include="images\customize\type3.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\logonotext.png" />
     <Content Include="images\pfp.png" />
     <Content Include="images\pizzahome.jpg" />
     <Content Include="images\pizzas\pizza1.png" />

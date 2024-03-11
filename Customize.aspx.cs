@@ -211,14 +211,18 @@ namespace Planet_Pizza_Project
         {
             if (Session["email"] != null)
             {
-                Session["checkCart"] = 1;
+                string receiverEmail = Session["email"].ToString();
+                string itemName = CustomizedNameTextBox.Text;
                 string[] finalPriceArray = PriceLabel.Text.Split('=');
                 int finalPrice = Convert.ToInt32(finalPriceArray[1].Trim());
-                string query = "INSERT INTO Orders VALUES(@pizzaImage, @pizzaName, @pizzaPrice)";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@pizzaImage", "/images/customize/type1.png");
-                cmd.Parameters.AddWithValue("@pizzaName", CustomizedNameTextBox.Text);
-                cmd.Parameters.AddWithValue("@pizzaPrice", finalPrice);
+                string dateTime = System.DateTime.Now.ToString();
+                string insertQuery = "INSERT INTO TempOrders VALUES(@itemImage, @receiverEmail, @itemName, @itemPrice, @dateTime)";
+                SqlCommand cmd = new SqlCommand(insertQuery, con);
+                cmd.Parameters.AddWithValue("@itemImage", "/images/customize/type1.png");
+                cmd.Parameters.AddWithValue("@receiverEmail", receiverEmail);
+                cmd.Parameters.AddWithValue("@itemName", itemName);
+                cmd.Parameters.AddWithValue("@itemPrice", finalPrice);
+                cmd.Parameters.AddWithValue("@dateTime", dateTime);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 Response.Redirect("Cart.aspx");
