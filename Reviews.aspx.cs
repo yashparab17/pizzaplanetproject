@@ -16,7 +16,7 @@ namespace Planet_Pizza_Project
         {
             if (!IsPostBack)
             {
-                string reviewQuery = "SELECT * FROM Reviews";
+                string reviewQuery = "SELECT * FROM Reviews ORDER BY id DESC";
                 SqlDataAdapter reviewAdapter = new SqlDataAdapter(reviewQuery, con);
                 DataTable reviewsTable = new DataTable();
                 reviewAdapter.Fill(reviewsTable);

@@ -31,7 +31,8 @@ namespace Planet_Pizza_Project
             else
             {
                 reader.Close();
-                string insertQuery = "INSERT INTO Accounts VALUES('" + NameTextBox.Text + "','" + EmailTextBox.Text + "','" + PasswordTextBox.Text + "','" + MobileTextBox.Text + "','" + AddressTextBox.Text + "')";
+                string datetime = System.DateTime.Now.ToString();
+                string insertQuery = "INSERT INTO Accounts VALUES('" + NameTextBox.Text + "','" + EmailTextBox.Text + "','" + PasswordTextBox.Text + "','" + MobileTextBox.Text + "','" + AddressTextBox.Text + "','" + datetime  + "')";
                 SqlCommand cmd2 = new SqlCommand(insertQuery, con);
                 int i = Convert.ToInt32(cmd2.ExecuteNonQuery());
                 MultiView1.ActiveViewIndex = 1;

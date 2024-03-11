@@ -26,7 +26,7 @@ namespace Planet_Pizza_Project
 
         protected void GoHomeButton_Click(object sender, EventArgs e)
         {
-            string insertOrdersQuery = "INSERT INTO Orders (orderID, receiverEmail, itemName, itemPrice) SELECT id, receiverEmail, itemName, itemPrice FROM TempOrders";
+            string insertOrdersQuery = "INSERT INTO Orders (orderID, receiverEmail, itemName, itemPrice, dateTime) SELECT id, receiverEmail, itemName, itemPrice, dateTime FROM TempOrders";
             string deleteQuery = "DELETE FROM TempOrders";
             SqlCommand cmd1 = new SqlCommand(insertOrdersQuery, con);
             SqlCommand cmd2 = new SqlCommand(deleteQuery, con);
